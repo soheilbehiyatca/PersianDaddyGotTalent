@@ -9,8 +9,8 @@ html {
   justify-content: space-between;
   align-items: center;
   border: 1px solid lightgrey;
-  padding: 5px;
-  background-color: white;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.9);
   border-radius: 20px;
   margin-top: 10px;
     }
@@ -20,59 +20,65 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
-  background-color: white;
+  background-color: rgba(255,255,255,0.9);
   border-radius: 20px;
   margin-top: 10px;
   }
 
 /* --------------------------------------------------------------------------------- */
 body {
-  font-family: Roboto;
-  font-size: 24px;
-  background: linear-gradient(#1e3a8a, #1e3a8a, #1e3a8a,#6d28d9,#6d28d9,#6d28d9);
-    }
-
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  background: #f5f7fb;
+  color: #111827;
+}
 /* --------------------------------------------------------------------------------- */
 .mainbackground {
-  border: 1px solid lightgrey;
+  border: none;
   border-radius: 20px;
-  padding: 50px;
+  padding: 0px;
   max-width: 1350px;
-  margin: 100px auto; /*this basically stands for margin: [top-bottom] [left-right]; so i just need to define the margin
+  margin: 25px auto; /*this basically stands for margin: [top-bottom] [left-right]; so i just need to define the margin
    for top and bottom, and assign left and right as auto */
   gap: 15px;
-  background-color: rgba(179, 179, 179, 0.9);
+  background-color: rgba(255,255,255,1);
 }
 
 /* --------------------------------------------------------------------------------- */
 .banner {
   display: flex;
   justify-content: left;
-  background: linear-gradient(to left, #6d28d9, #1e3a8a);
+  background-color: rgba(255,255,255,0.9);
+  color: black;
   margin-top: 10px;
-  color: white;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 16px;
   flex-wrap: wrap;
+  border: 1px solid lightgrey;
 }
 
 /* --------------------------------------------------------------------------------- */
 .announcement1,
 .announcement2,
 .welcomebox{
-  border: 1px solid lightgrey;
-  text-align: left;
+
+  border: none;
   border-radius: 20px;
-  padding: 40px;
+  padding: 20px;
   max-width: 1350px;
-  margin: 10px auto 0 auto;
-  background-color: white;
+  margin: 20px 0;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid lightgrey;
+
+
 }
 /* --------------------------------------------------------------------------------- */
 .alertbox {
   border: 4px solid grey;
   border-radius: 50px;
   padding: 10px;
+  background-color:white;
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -87,36 +93,48 @@ body {
 .button {
   cursor: pointer;
   flex: 1;
-  width: 100%;
-  min-height:100px;
-  min-width:400px;
-  border: 1px solid lightgrey;
-  border-radius: 60px;
+  min-height: 70px;
+  min-width: 250px;
+  border-radius: 20px;
   padding: 20px;
-  background: linear-gradient(to right, #000738, #3282F6);
+  background: rgb(0, 28, 125);
   color: white;
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 600;
   text-align: center;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  transition-delay: 0.2s
+  border: none;
+  transition: all 0.2s ease;
 }
 
-.button:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
-  filter: brightness(1.2);
-  background: linear-gradient(to right, #3282F6);
-
+.button:hover,
+.anon-button:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.anon-button{
+  cursor:pointer;
+  flex: 1;              /* equal width */
+  min-height: 80px;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgb(0, 28, 125);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  display: flex;
+  text-decoration: none !important;/* removes the underlines in a hyperlinked text */
+
+}
 /* --------------------------------------------------------------------------------- */
 select {
      appearance: menulist-button;
       padding: 4px 30px 8px 10px;
-      border: 1px solid #ccc;
+      border: 1px solid black;
       border-radius: 20px;
-      font-size: 24px;
+      font-size: 20px;
       cursor: pointer;
 
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
@@ -126,14 +144,16 @@ select {
 
 /* --------------------------------------------------------------------------------- */
 h1 {
-  font-size: 50px;
+  font-size: 44px;
+  font-weight: 600px;
+  text-align:center;
 }
 /* --------------------------------------------------------------------------------- */
 h2 {
-  font-size: 38px;
+  font-size: 30px;
+  font-weight: 400px;
   text-align: center;
 }
-
 /* --------------------------------------------------------------------------------- */
 .checkreport {
   border: 1px solid lightgrey;
@@ -142,26 +162,20 @@ h2 {
   padding: 20px;
   max-height: 600px;
   max-width: 1350px;
-  margin: 10px auto 0 auto;
-  background-color: white;
+    margin: 20px 0;
+  background-color: rgba(255,255,255,0.9);
 }
 
 /* --------------------------------------------------------------------------------- */
-.input {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
-}
 
 .inputbox {
-  border: 1px solid lightgrey;
-  border-radius: 20px;
-  padding: 30px;
-  margin-top: 15px;
-  background-color: rgb(242, 240, 242);
-  font-size: 24px;
-  width: 500px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 14px;
+  background-color: lightyellow;
+  font-size: 20px;
+  width: 100%;          /* 🔥 critical */
+  max-width: 600px;     /* prevents over-stretch */
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -170,7 +184,7 @@ h2 {
   border-radius: 20px;
   padding: 20px;
   margin-top: 10px;
-  background-color: white;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .faqcontent {
@@ -178,62 +192,166 @@ h2 {
   border-radius: 20px;
   padding: 20px;
   margin-top: 10px;
-  background: linear-gradient(to top, white, rgb(242, 240, 242), white);
+  background: white;
 }
 
 /* --------------------------------------------------------------------------------- */
-/* Background Animation */
+/* Background Animation for box 1 which is represented by the sun disk
 
-.box {
+Scaling (very useful)
+from { transform: scale(0.5); }
+to   { transform: scale(1.5); }
+
+*/
+
+.box1 {
   position: fixed;
-  top: 100;
-  left: 0;
-  width: 750px;
-  height: 750px;
-  background: rgba(255, 255, 255, 0.3);
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 1300px;
   z-index: -1;
+  opacity: 0.7;
+  border:1px solid black;
 
-  animation: moveAndShape linear both;
+  animation: movebox1 linear both;
     animation-timeline: scroll();
-
 }
 
-@keyframes moveAndShape {
+@keyframes movebox1 {
   from {
-    transform: translateX(-150px); /*i can also add translate Y(xxx px) to make the animation move along the Y axis */
     border-radius: 5%;
+    transform: scale(1);
+    background: rgb(0, 54, 242);
   }
 
   to {
-    transform: translateX(2650px); /*i can also add translate Y(xxx px) to make the animation move along the Y axis */
-    border-radius: 100%;
+    border-radius: 5%;
+    transform: scale(4);
+    background: rgb(255, 16,16);
+  }
+}
+/* --------------------------------------------------------------------------------- */
+/* Background Animation for box 1 which is represented by the red rectangle
+
+A. Movement (you already started)
+Combine X + Y
+transform: translate(100vw, 300px);
+
+Diagonal motion
+from { transform: translate(-100px, 0); }
+to   { transform: translate(100vw, 300px); }
+
+C. Rotation
+from { transform: rotate(0deg); }
+to   { transform: rotate(360deg); }
+
+D. Opacity (fade effects)
+from { opacity: 0; }
+to   { opacity: 1; }
+
+E. Shape morphing
+from { border-radius: 0%; }
+to   { border-radius: 50%; }
+
+F. Color transitions
+from { background: red; }
+to   { background: blue; }
+
+G. Blur / glass effects
+from { filter: blur(0px); }
+to   { filter: blur(10px); }
+
+3D transforms
+transform: rotateY(180deg);
+
+Perspective
+transform: perspective(500px) rotateX(45deg);
+
+Combining multiple effects (this is where it becomes professional)
+
+Example:
+
+@keyframes movebox1 {
+  from {
+    transform: translateX(-150px) scale(0.8) rotate(0deg);
+    opacity: 0.3;
+    border-radius: 0%;
+  }
+
+  to {
+    transform: translateX(100vw) scale(1.2) rotate(180deg);
+    opacity: 0.8;
+    border-radius: 50%;
   }
 }
 
+
+6. Easing (critical for realism)
+
+Right now:
+
+linear
+
+Better options:
+
+Value	Effect
+ease	natural acceleration
+ease-in	slow start
+ease-out	slow end
+ease-in-out	smooth both sides
+
+7. Scroll animation upgrades
+Control scroll range
+
+Instead of entire page:
+
+animation-range: 0% 50%;
+*/
+
+.box2 {
+  position: fixed;
+  top: -50px;
+  right: -300px;
+  width: 1000px;
+  height: 700px;
+  z-index: -1;
+  opacity:0.7;
+  border:1px solid black;
+
+
+  animation: movebox2 linear both;
+    animation-timeline: scroll();
+}
+@keyframes movebox2 {
+  from {
+    transform: translate(0px, 0px); /*diagonal movement */
+    border-radius: 5%;
+    background: rgb(255, 16,16);
+  }
+
+  to {
+    transform: translate(-1340px, 500px); /*i diagonal movement*/
+    border-radius: 5%;
+    background: rgb(0, 18, 154);
+    }
+}
+
+
 /* --------------------------------------------------------------------------------- */
 .anon-option{
+
     display: flex;
     flex-direction: row;
     gap: 20px;   /* add this */
-    padding: 40px;
+    padding: 20px;
     margin: 10px auto 10px auto;
     background: white;
     border-radius: 20px;
     align-items: stretch; /* ensures equal height */
-
-    }
-
-.option-1,
-.option-2,
-.option-3{
-    display:flex;
-    flex:1;
-    flex-direction: column;
-    justify-content: space-evenly;
     }
 
 /* --------------------------------------------------------------------------------- */
-
 .body1 {
     font-family: Roboto;
     background:#1e3a8a;
@@ -242,3 +360,53 @@ h2 {
 #wbDetails {
     display: none;
 }
+/* --------------------------------------------------------------------------------- */
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+/* --------------------------------------------------------------------------------- */
+
+.form-container {
+  display: grid;
+  grid-template-columns: 220px 1fr; /* tighter + cleaner */
+  gap: 15px 25px;
+  align-items: center;
+}
+
+.form-container label {
+  font-weight: 500;
+  text-align: right;
+}
+
+.submit-container {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;   /* 🔥 THIS centers it */
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgba(88,94,242,0.8);
+  border:1px solid black;
+}
+
+
+.box3 {
+  position: fixed;
+  background: rgb(0, 28, 125);
+  width: 400px;
+  height: 1500px;
+  z-index: -1;
+  opacity: 1;
+  border:1px solid black;
+  border-radius: 20px;
+
+
+
+

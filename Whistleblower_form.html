@@ -1,37 +1,127 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Persian Daddy Ethisline Platform - Whistleblower Form Page</title>
-    <link rel="stylesheet" href="styling.css"></head>
+    <title>Persian Daddy EthicsLine Platform - Whistleblower Online Form</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+<div class ="box3"></div>
 
 
-<body class ="body1">
-<div class = "mainbackground">
-    <div class="headers">
-        <div class="headersubgroup">
-            <div>
-                <h1>Persian Daddy EthicsLine Platform</h1>
-            </div>
+<div class = "mainContainer">
+
+    <div class="mainbackground">
+
+        <!-- HEADER -->
+        <div class="headers">
+            <h2>Persian Daddy EthicsLine</h2>
         </div>
 
-
-
+        <!-- BANNER -->
         <div class="banner">
-            ATTENTION! This webpage is hosted on Persian Daddy’s secure
-            servers and is not part of the Persian Cat website or intranet.
+            ATTENTION! This webpage is hosted on Persian Daddy’s secure servers and is not part of the Company website or intranet.
         </div>
 
-        <div class="Anonymity">
-            <div class = "title"><h2>[Placeholder]</h2></div>
-            <p class = "welcometxt">
-                [Placeholder]
-            </p>
-            <div class = "buttons">
-                <button class = "button">Placeholder</button>
-            </div>
+        <!-- QUESTION -->
+        <div class="welcomebox">
+            <h2>Whistleblower Online Form</h2>
         </div>
-    </div>
+
+        <!-- OPTIONS -->
+        <div class="anon-option">
+
+
+            <!-- FORM (HIDDEN INITIALLY) -->
+            <div class="announcement1" id="OnlineForm">
+
+                <div class="form-container">
+
+                    <label for="name">[x]</label>
+                    <input id="name" class="inputbox" type="text" placeholder="[x]" required>
+
+                    <label for="email">[x]</label>
+                    <input id="email" class="inputbox" type="email" placeholder="[x]" required>
+
+                    <label for="phone">[x]</label>
+                    <input id="phone" class="inputbox" type="text" placeholder="[x]" required>
+
+                    <label for="country">[x]</label>
+                    <input id="country" class="inputbox" type="text" placeholder="[x]" required>
+
+                    <label for="relation">[x]</label> <!-- lable and input always go together. With Label,
+             I should declare "for"  e.g. relation, and with input I should declare ID == for -->
+                    <input id="relation" class="inputbox" type="text" placeholder="[x]" required>
+
+                    <div class="submit-container">
+                        <a href="Whistlebower_summary_page.html">
+                            <button class="button">Review Submission</button>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- JAVASCRIPT -->
+
+                <script>
+                    const wbDetails = document.getElementById("wbDetails");
+
+                    document.getElementById("option2").addEventListener("click", function() {
+                        wbDetails.style.display = "block";
+                        wbDetails.scrollIntoView({ behavior: "smooth" });
+                    });
+
+                    document.getElementById("option3").addEventListener("click", function() {
+                        wbDetails.style.display = "block";
+                        wbDetails.scrollIntoView({ behavior: "smooth" });
+                    });
+                </script>
+
+</body>
+</html>
+
+
+<!--JS code for showing or hiding the WB contact details. The logic is as follows:     What your code is doing
+(plain explanation)
+const wbDetails = document.getElementById("wbDetails");
+- Looks through the page (DOM) and grabs the element with id="wbDetails"
+- Stores it in a variable so you can control it later
+
+
+document.getElementById("option2").addEventListener("click", function() {
+- Finds the button with id="option2"
+- Listens for a click
+- When clicked → run the function
+
+
+wbDetails.style.display = "block";
+- Changes the CSS of that hidden section
+- Makes it visible
+
+Same logic here:
+
+document.getElementById("option3").addEventListener("click", function() {
+    wbDetails.style.display = "block";
+});
+-->
+<script>
+    const wbDetails = document.getElementById("wbDetails");
+
+    document.getElementById("option2").addEventListener("click", function() {
+        wbDetails.style.display = "block";
+    });
+
+    document.getElementById("option3").addEventListener("click", function() {
+        wbDetails.style.display = "block";
+    });
+</script>
+
+<!--______________________________________________________________________-->
+
+</div>
 
 </body>
 </html>
