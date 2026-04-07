@@ -1,0 +1,162 @@
+what other JS functions can i create like above?
+
+You’re at the stage where you should stop thinking “what functions exist?” and start thinking:
+
+“What user behaviors do I want to control?”
+
+Everything you just did (show/hide) is one interaction pattern. There are a handful of patterns that cover most real-world UI.
+
+Below are the highest ROI patterns you should learn next — with simple examples.
+
+1. Toggle (show ↔ hide)
+
+Instead of only showing, allow switching both ways.
+
+const box = document.getElementById("wbDetails");
+
+document.getElementById("option-2").addEventListener("click", () => {
+    box.classList.toggle("show");
+});
+#wbDetails {
+    display: none;
+}
+#wbDetails.show {
+    display: block;
+}
+Why this matters
+Used everywhere (menus, dropdowns, modals)
+
+2. Read user input (critical for forms)
+const name = document.querySelector("input[placeholder='Name']").value;
+console.log(name);
+Use cases
+Form submission
+Validation
+Sending data to backend
+
+3. Form validation (must-learn)
+document.querySelector(".button").addEventListener("click", () => {
+    const email = document.querySelector("input[type='email']").value;
+
+    if (email === "") {
+        alert("Email is required");
+    }
+});
+Why this matters
+Prevents bad data
+Core skill for any real app
+
+4. Change content dynamically
+document.getElementById("wbDetails").innerText = "Details required below";
+
+Or:
+
+element.innerHTML = "<strong>Updated</strong>";
+Use cases
+Feedback messages
+Status updates
+Notifications
+
+5. Enable / disable buttons
+const submitBtn = document.querySelector(".button");
+
+submitBtn.disabled = true;
+
+Enable when valid:
+
+submitBtn.disabled = false;
+Why this matters
+Controls user flow
+Prevents premature actions
+
+6. Multiple event types (not just click)
+input.addEventListener("input", () => {
+    console.log("User typing...");
+});
+
+Other useful ones:
+
+"change"
+"mouseover"
+"keydown"
+
+7. Conditional logic (this is where skill starts)
+document.getElementById("option-2").addEventListener("click", () => {
+    const box = document.getElementById("wbDetails");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+});
+Why this matters
+Moves you from static → dynamic thinking
+
+8. Reusable functions (important step up)
+
+Instead of repeating code:
+
+function showElement(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+document.getElementById("option-2").addEventListener("click", () => showElement("wbDetails"));
+document.getElementById("option-3").addEventListener("click", () => showElement("wbDetails"));
+Why this matters
+Scales your code
+Reduces duplication
+
+9. Event delegation (advanced but powerful)
+
+Instead of adding listeners to every button:
+
+document.querySelector(".anon-option").addEventListener("click", (e) => {
+    if (e.target.id === "option-2" || e.target.id === "option-3") {
+        document.getElementById("wbDetails").style.display = "block";
+    }
+});
+Why this matters
+Cleaner for large apps
+Used in professional codebases
+
+10. Prevent default behavior (important for forms & links)
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+});
+Why this matters
+Stops page reload
+Lets you control flow manually
+What you should focus on next (no fluff)
+
+Build these 3 things:
+
+1. Multi-step form (your current project)
+Step 1 → choose anonymity
+Step 2 → show inputs
+Step 3 → validate + submit
+2. Validation system
+Empty fields → block submission
+Show error messages inline (not alerts)
+3. State-based UI
+
+Example:
+
+If anonymous → skip details
+If identified → require details
+Reality check
+
+You don’t need “more JS functions”.
+
+You need:
+
+Repetition
+Pattern recognition
+Building small systems
+
+If you want, I can:
+
+Turn your current page into a proper production-level flow
+With validation, clean architecture, and scalable JS structure
+
+That would move you from beginner → intermediate quickly.
