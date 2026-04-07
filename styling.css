@@ -1,0 +1,233 @@
+html {
+  scroll-behavior: smooth;
+  zoom: 80%;
+}
+
+/* --------------------------------------------------------------------------------- */
+.headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+    }
+
+.headersubgroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  }
+
+/* --------------------------------------------------------------------------------- */
+body {
+  font-family: Roboto;
+  font-size: 24px;
+  background: linear-gradient(#1e3a8a, #1e3a8a, #1e3a8a,#6d28d9,#6d28d9,#6d28d9);
+    }
+
+/* --------------------------------------------------------------------------------- */
+.mainbackground {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 1350px;
+  margin: 100px auto; /*this basically stands for margin: [top-bottom] [left-right]; so i just need to define the margin
+   for top and bottom, and assign left and right as auto */
+  gap: 15px;
+  background-color: rgba(179, 179, 179, 0.9);
+}
+
+/* --------------------------------------------------------------------------------- */
+.banner {
+  display: flex;
+  justify-content: left;
+  background: linear-gradient(to left, #6d28d9, #1e3a8a);
+  margin-top: 10px;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------------- */
+.announcement1,
+.announcement2,
+.welcomebox{
+  border: 1px solid lightgrey;
+  text-align: left;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1350px;
+  margin: 10px auto 0 auto;
+  background-color: white;
+}
+/* --------------------------------------------------------------------------------- */
+.alertbox {
+  border: 4px solid grey;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+/* --------------------------------------------------------------------------------- */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+/* ✅ FIXED BUTTONS */
+.button {
+  cursor: pointer;
+  flex: 1;
+  width: 100%;
+  min-height:100px;
+  min-width:400px;
+  border: 1px solid lightgrey;
+  border-radius: 60px;
+  padding: 20px;
+  background: linear-gradient(to right, #000738, #3282F6);
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  transition-delay: 0.2s
+}
+
+.button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+  filter: brightness(1.2);
+  background: linear-gradient(to right, #3282F6);
+
+}
+
+/* --------------------------------------------------------------------------------- */
+select {
+     appearance: menulist-button;
+      padding: 4px 30px 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 24px;
+      cursor: pointer;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* --------------------------------------------------------------------------------- */
+h1 {
+  font-size: 50px;
+}
+/* --------------------------------------------------------------------------------- */
+h2 {
+  font-size: 38px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------------- */
+.checkreport {
+  border: 1px solid lightgrey;
+  text-align: left;
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 600px;
+  max-width: 1350px;
+  margin: 10px auto 0 auto;
+  background-color: white;
+}
+
+/* --------------------------------------------------------------------------------- */
+.input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputbox {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 15px;
+  background-color: rgb(242, 240, 242);
+  font-size: 24px;
+  width: 500px;
+}
+
+/* --------------------------------------------------------------------------------- */
+.faq {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.faqcontent {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  background: linear-gradient(to top, white, rgb(242, 240, 242), white);
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Background Animation */
+
+.box {
+  position: fixed;
+  top: 100;
+  left: 0;
+  width: 750px;
+  height: 750px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+
+  animation: moveAndShape linear both;
+    animation-timeline: scroll();
+
+}
+
+@keyframes moveAndShape {
+  from {
+    transform: translateX(-150px); /*i can also add translate Y(xxx px) to make the animation move along the Y axis */
+    border-radius: 5%;
+  }
+
+  to {
+    transform: translateX(2650px); /*i can also add translate Y(xxx px) to make the animation move along the Y axis */
+    border-radius: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------------- */
+.anon-option{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;   /* add this */
+    padding: 40px;
+    margin: 10px auto 10px auto;
+    background: white;
+    border-radius: 20px;
+    align-items: stretch; /* ensures equal height */
+
+    }
+
+.option-1,
+.option-2,
+.option-3{
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    }

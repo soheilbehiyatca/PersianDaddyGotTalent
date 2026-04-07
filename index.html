@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <title>Welcome</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 10px;
+      font-family: Roboto;
+      background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+      color: white;
+      transition: opacity 1s ease;
+      font-size: 60px;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    setTimeout(function() {
+      document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+    window.location.href = "Ethicsline_landing_page.html";
+        }, 1000);
+        }, 1500);
+  </script>
+</head>
+
+<body>
+  <div>
+    <h1>Welcome to KPMG EthicsLine</h1>
+  </div>
+
+
+
+
+</body>
+</html>
