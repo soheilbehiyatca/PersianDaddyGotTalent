@@ -23,23 +23,80 @@
     <div class = "anon-option">
 
             <div class="option-1">
-                <div><p> </p></div>
-                <div><button class = "button"> No, I wish to remain anonymous </button></div>
+                <a href = "Contact_preference.html"><div><button class = "button"> No, I wish to remain anonymous </button></div></a>
             </div>
 
             <div class="option-2">
-                <div><p> </p></div>
-                <div><button class = "button"> Yes, I wish to provide my name and contact details to Persian Daddy only </button></div>
+                <a href = #wbDetails><div><button class = "button" id = "option2"> Yes, I wish to provide my name and
+                    contact
+                    details to
+                    Persian
+                Daddy
+                    only </button></a>
+                </div>
             </div>
 
             <div class="option-3">
-                <div><p> </p></div>
-                <div><button class = "button"> Yes, I give my consent for my name and contact details to be provided
-                    to the Company</button></div>
+                <a href = #wbDetails><div><button class = "button" id = "option3"> Yes, I give my consent for my name
+                    and
+                    contact details to be
+                provided
+                    to the Company</button></a>
+                </div>
             </div>
     </div>
 
+    <div class = "welcomebox" id = "wbDetails" >
+            <div><input class = "inputbox"  type="text" placeholder="Name" required/></div>
+            <div><input class = "inputbox"  type="email" placeholder="Email Address" required/></div>
+            <div><input class = "inputbox"  type="text" placeholder="Phone Number" required/></div>
+            <div><input class = "inputbox"  type="text" placeholder="Country" required/></div>
+            <div><input class = "inputbox"  type="text" placeholder="Relation" required/></div>
+            <div class = "buttons">
+                <a href = "Contact_preference.html"><button class = "button">Submit</button></a>
+            </div>
+    </div>
 </div>
+
+
+<!--JS code for showing or hiding the WB contact details. The logic is as follows:
+What your code is doing (plain explanation)
+const wbDetails = document.getElementById("wbDetails");
+- Looks through the page (DOM) and grabs the element with id="wbDetails"
+- Stores it in a variable so you can control it later
+
+
+document.getElementById("option2").addEventListener("click", function() {
+- Finds the button with id="option2"
+- Listens for a click
+- When clicked → run the function
+
+
+wbDetails.style.display = "block";
+- Changes the CSS of that hidden section
+- Makes it visible
+
+Same logic here:
+
+document.getElementById("option3").addEventListener("click", function() {
+    wbDetails.style.display = "block";
+});
+-->
+<script>
+    const wbDetails = document.getElementById("wbDetails");
+
+    document.getElementById("option2").addEventListener("click", function() {
+        wbDetails.style.display = "block";
+    });
+
+    document.getElementById("option3").addEventListener("click", function() {
+        wbDetails.style.display = "block";
+    });
+</script>
+
+<!--______________________________________________________________________-->
+
+
 
 </body>
 </html>
